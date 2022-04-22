@@ -1,0 +1,89 @@
+.pageWrapper {
+  padding: 20px;
+  max-width: 320px;
+}
+.todoList {
+  padding: 0;
+}
+.todoLink {
+  list-style-type: none;
+  max-width: 90vw;
+  padding: 5px 0;
+  cursor: pointer;
+  &.completed {
+    .todoTitle {
+      text-decoration: line-through;
+    }
+  }
+
+  &:hover {
+    background-color: antiquewhite;
+  }
+  .todoWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: row;
+  }
+  .todoTitle {
+    font-size: 15px;
+    max-width: 280px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: auto;
+  }
+  .markComplete {
+    padding: 20px;
+    margin: auto 10px auto auto;
+  }
+  .removeTodo {
+    padding: 10px;
+    background: #efc191;
+    transition: background-color 0.2s;
+    &:after {
+      content: "x";
+    }
+    &:hover {
+      background: #b07d3e;
+    }
+    &:active {
+      background: #8f632d;
+    }
+  }
+}
+.addTodo {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  > input {
+    width: 100%;
+  }
+  .inputError {
+    bottom: -15px;
+    left: 0;
+    position: absolute;
+    color: red;
+    font-size: 12px;
+  }
+}
+.updateTodoTitle {
+  max-width: 320px;
+  .todoTitle {
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .updateTodoTitleInput {
+    margin-left: 10px;
+    width: 100%;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    > button {
+      margin: 0 15px;
+    }
+  }
+}
